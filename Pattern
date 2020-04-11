@@ -1,0 +1,22 @@
+a=[]
+for l in range(6):
+  h=int(input('your chance'))
+  a.append(h)
+def pattern():
+  for i in range(1,4):
+    h=i
+    for j in range(7):
+      if j%2==0:
+        print('|',end='')
+      else:
+        myno=(j+1)/2
+        sum1=h*10+myno
+        for i in range(len(a)):
+          if a[i]==sum1:
+            print('X',end='')
+            break
+        else:
+           print(' ',end='')
+    print()
+  
+pattern()
